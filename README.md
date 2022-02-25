@@ -1,2 +1,2 @@
 # ARIMA_forecasting
-boilerplate code for simulating ARIMA-based trading strategies 
+boilerplate code for running simulations of ARIMA-based trading strategies 

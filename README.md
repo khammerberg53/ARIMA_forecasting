@@ -1,2 +1,2 @@
 # ARIMA_forecasting
-boilerplate code for fitting ARIMA to yfinance data
+boilerplate code for simulating ARIMA-based trading strategies 

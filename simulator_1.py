@@ -16,12 +16,15 @@ warnings.filterwarnings('ignore', category=ValueWarning)
 warnings.filterwarnings('ignore', category=HessianInversionWarning)
 warnings.filterwarnings('ignore', category=ConvergenceWarning)
 
+# select your stock's ticker symbol
 tickerSymbol = 'SPY'
 data = yf.Ticker(tickerSymbol)
 
+# converting price data to returns 
 prices = data.history(start='2017-01-01', end='2022-01-01').Close
 returns = prices.pct_change().dropna()
 
+# function for calculating standard deviation 
 def std_dev(data):
     # Get number of observations
     n = len(data)
@@ -34,7 +37,7 @@ def std_dev(data):
     s = variance**(1/2)
     return s
 
-# Sharpe Ratio From Scratch
+# function for calculating sharpe ratio
 def sharpe_ratio(data, risk_free_rate=0):
     # Calculate Average Daily Return
     mean_daily_return = sum(data) / len(data)
